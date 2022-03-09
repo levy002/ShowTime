@@ -1,5 +1,5 @@
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const appId = 'DRKQ6v7kQlGOTLzeUiRR';
+const appId = '3p7stlK4daF9Z5wTNg5X';
 
 const getLikesData = async () => {
   let data = await fetch(`${baseUrl}${appId}/likes`);
@@ -20,7 +20,7 @@ const postLikes = async (showId, element) => {
   const likesArray = await getLikesData();
   likesArray.map((a) => {
     if (a.item_id === showId) {
-      element.textContent = `${a.likes} likes`;
+      element.textContent = `${a.likes}`;
     }
     return a;
   });
