@@ -5,7 +5,7 @@ const displayLikes = async (elem) => {
   const likesArray = await getLikesData();
   likesArray.map((a) => {
     if (a.item_id === showId) {
-      elem.innerHTML = `${a.likes} likes`;
+      elem.innerHTML = `${a.likes}`;
     }
     return a;
   });

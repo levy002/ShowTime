@@ -28,9 +28,11 @@ const displayShows = async () => {
   <img id="show-img" src=${show.image.medium} alt="show Image">
   <div id="like-show">
     <h2 id="show-title">${show.name}</h2>
-    <i class="fa fa-heart-o" id="like-icon" aria-hidden="true"></i>
+    <i class="fas fa-heart" id='liked-icon'></i>
   </div>
-  <p id="likes">${show.likes} likes</p>
+  <div id="likes">
+  <p>${show.likes}</p><span>likes</span>
+  </div>
   <button type="button" id="comment-btn">Comments</button>
   `;
     allShows.appendChild(showInfo);
