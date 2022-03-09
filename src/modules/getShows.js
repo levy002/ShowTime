@@ -1,4 +1,5 @@
 import displayShows from './displayShow.js';
+import { getLikesData } from './likesCounter.js';
 
 const shows = [];
 const showId = [
@@ -10,13 +11,14 @@ const getshow = showId.map(async (id) => {
   data = await data.json();
   const show = {
     name: data.name,
-    preview: data.summary,
     image: data.image.original,
     id: data.id,
+    likes: 0,
   };
+
   shows.push(show);
-  displayShows(shows);
-  return shows;
+  displayShows(show);
+  return data;
 });
 
 export default getshow;
