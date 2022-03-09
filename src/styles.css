@@ -44,6 +44,7 @@ i:hover {
 #likes {
   align-self: end;
   margin: 0;
+  font-size: 20px;
 }
 
 #comment-btn {
