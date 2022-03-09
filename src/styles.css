@@ -9,17 +9,15 @@ i:hover {
 .allShows {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .show {
   display: flex;
   flex-flow: column;
-  align-items: space-between;
   justify-content: space-between;
   width: 250px;
   height: 400px;
-  border: 1px solid hidden;
   border-radius: 5px;
   background-color: antiquewhite;
   padding: 10px;
@@ -27,7 +25,7 @@ i:hover {
 
 #show-img {
   height: 267px;
-  width: 100%; 
+  width: 100%;
 }
 
 #like-show {
@@ -51,4 +49,3 @@ i:hover {
   align-self: end;
   justify-self: end;
 }
-
