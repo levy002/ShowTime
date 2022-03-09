@@ -1,4 +1,4 @@
-import getshow from './modules/getShows.js';
+import displayShows from './modules/displayShow.js';
 import './styles.css';
 
-getshow();
+displayShows();
