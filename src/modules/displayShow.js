@@ -1,6 +1,7 @@
 import getshow from './getShows.js';
 
 const allShows = document.querySelector('.allShows');
+allShows.innerHTML = '';
 
 const showTemplate = (Shows) => {
   Shows.forEach((show) => {
