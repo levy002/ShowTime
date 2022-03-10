@@ -20,7 +20,7 @@ const displayShows = async () => {
     return a;
   });
 
-  Shows.map((show) => {
+  Shows.forEach((show) => {
     const showInfo = document.createElement('li');
     showInfo.id = show.id;
     showInfo.className = 'show';
@@ -36,7 +36,6 @@ const displayShows = async () => {
   <button type="button" id="comment-btn">Comments</button>
   `;
     allShows.appendChild(showInfo);
-    return show;
   });
 };
 
