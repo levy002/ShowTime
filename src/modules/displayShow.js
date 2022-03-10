@@ -17,7 +17,7 @@ const displayShows = async () => {
     <i class="fa fa-heart-o" id="like-icon" aria-hidden="true"></i>
   </div>
   <p id="likes">0 likes</p>
-  <button type="button" id="comment-btn">Comments</button>
+  <button type="button" id="comment-btn" value="abc">Comments</button>
   `;
     allShows.appendChild(showInfo);
     return show;
