@@ -19,7 +19,16 @@ header h2 {
 }
 
 header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 100px;
+  gap: 3px;
+}
+
+#shows-counter {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 i:hover {
