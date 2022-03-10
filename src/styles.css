@@ -40,6 +40,7 @@ i:hover {
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 100px;
+}
 
 .show {
   display: flex;
