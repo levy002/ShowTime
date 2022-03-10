@@ -8,8 +8,8 @@ const displayShows = async () => {
 
   Shows.map((show) => {
     const showInfo = document.createElement('li');
-    showInfo.id = show.id;
     showInfo.className = 'show';
+    showInfo.id = show.id;
     showInfo.innerHTML = `
   <img id="show-img" src=${show.image.medium} alt="show Image">
   <div id="like-show">
