@@ -30,6 +30,7 @@ const displayShows = async () => {
   const fetchedShows = await getshow();
   const Shows = fetchedShows.slice(0, 20);
   counter.textContent = `(${showsNumber(Shows)})`;
+
   const likesArray = await getLikesData();
   likesArray.forEach((a) => {
     Shows.forEach((show) => {
