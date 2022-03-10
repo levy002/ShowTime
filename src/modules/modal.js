@@ -2,12 +2,18 @@ import getshow from './getShows.js';
 
 const modal = document.getElementById('modal-popup');
 const modalTemplate = (show) => {
-      const showInfo = document.createElement('li');
-      showInfo.id = show.id;
-      showInfo.innerHTML = `
+     modal.innerHTML = 
+      `      <li id=${show.id}>
+      <div class ="closeModal">
+      <button type="button" id="close">&times;</button>
+      </div>
+      <div class ='showList'>
   <img class="modal-img" src=${show.image.medium} alt="show Image">
+  <div class ="showContent">
     <h2 class="modal-title" id="show-title">${show.name}</h2>
-    <p class="modal-summary">${show.summary}
+    <h4 class="modal-summary">${show.summary}</h4>
+    </div>
+    </div>
 
     <section id="awesome-comments"> 
     <div id="score">
@@ -23,8 +29,8 @@ const modalTemplate = (show) => {
        </form>
    </div> 
    </section>
+   </li>
   `;
-      modal.appendChild(showInfo);
 }
 
 const displayModal = async (element) => {
@@ -40,4 +46,5 @@ const displayModal = async (element) => {
   })
 };
 
-export default displayModal;
+
+export { displayModal, modal};
