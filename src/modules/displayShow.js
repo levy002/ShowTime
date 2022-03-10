@@ -3,15 +3,8 @@ import getshow from './getShows.js';
 const allShows = document.querySelector('.allShows');
 allShows.innerHTML = '';
 
-const displayShows = async () => {
-  const fetchedShows = await getshow();
-  const Shows = fetchedShows.slice(0, 24);
-
-  Shows.map((show) => {
-
 const showTemplate = (Shows) => {
   Shows.forEach((show) => {
-
     const showInfo = document.createElement('li');
     showInfo.className = 'show';
     showInfo.id = show.id;
@@ -22,7 +15,7 @@ const showTemplate = (Shows) => {
     <i class="far fa-heart" id="like-icon"></i>
   </div>
   <p id="likes">0 likes</p>
-  <button type="button" id="comment-btn" value="abc">Comments</button>
+  <button type="button" id="comment-btn">Comments</button>
   `;
     allShows.appendChild(showInfo);
   });
