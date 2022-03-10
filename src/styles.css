@@ -5,6 +5,26 @@
 
 body {
   background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: skyblue;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: rgb(9, 24, 156);
+  display: flex;
+  justify-content: space-between;
+}
+
+header h2 {
+  margin-left: 100px;
+}
+
+header div {
+  margin-right: 100px;
 }
 
 i:hover {
@@ -16,6 +36,7 @@ i:hover {
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .show {
@@ -24,6 +45,7 @@ i:hover {
   justify-content: space-between;
   width: 250px;
   height: 400px;
+  border: 1px hidden;
   border-radius: 5px;
   background-color: antiquewhite;
   padding: 10px;
@@ -48,8 +70,20 @@ i:hover {
 
 #likes {
   align-self: end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
   margin: 0;
   font-size: 20px;
+}
+
+#likes p {
+  margin: 0;
+}
+
+.fa-heart {
+  color: rgb(245, 17, 17);
 }
 
 #comment-btn {
