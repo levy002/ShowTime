@@ -24,7 +24,16 @@ header h2 {
 }
 
 header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 100px;
+  gap: 3px;
+}
+
+#shows-counter {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 i:hover {
@@ -84,6 +93,19 @@ i:hover {
 
 .fa-heart {
   color: rgb(245, 17, 17);
+}
+
+#likes-counter {
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+}
+
+#likes-counter p {
+  margin: 0;
+  font-size: 20px;
 }
 
 #comment-btn {

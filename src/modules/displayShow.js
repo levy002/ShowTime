@@ -1,4 +1,5 @@
 import getshow from './getShows.js';
+import showNumber from './showCounter.js';
 import { getLikesData } from './likesCounter.js';
 
 const allShows = document.querySelector('.allShows');
@@ -15,7 +16,10 @@ const showTemplate = (Shows) => {
     <h2 id="show-title">${show.name}</h2>
     <i class="fas fa-heart" id="liked-icon"></i>
   </div>
-  <p id="likes">${show.likes}</p><span>likes</span>
+  <div id="likes-counter">
+  <p id="likes">${show.likes}</p>
+  <p>likes</p>
+  </div>
   <button type="button" id="comment-btn">Comments</button>
   `;
     allShows.appendChild(showInfo);
@@ -25,6 +29,7 @@ const showTemplate = (Shows) => {
 const displayShows = async () => {
   const fetchedShows = await getshow();
   const Shows = fetchedShows.slice(0, 20);
+  showNumber(Shows);
   const likesArray = await getLikesData();
   likesArray.forEach((a) => {
     Shows.forEach((show) => {
