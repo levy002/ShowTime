@@ -7,7 +7,6 @@ const addLike = () => {
     const showId = Number(clickedElement.parentNode.parentNode.id);
     if (clickedElement.id === 'liked-icon') {
       postLikes(showId, likesCounter);
-      likesCounter.textContent = (Number(likesCounter.textContent) + 1);
     }
   });
 };
