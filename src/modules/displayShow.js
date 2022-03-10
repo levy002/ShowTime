@@ -2,28 +2,13 @@ import getshow from './getShows.js';
 import { getLikesData } from './likesCounter.js';
 
 const allShows = document.querySelector('.allShows');
+allShows.innerHTML = '';
 
-const displayShows = async () => {
-  const fetchedShows = await getshow();
-  const Shows = fetchedShows.slice(0, 20);
-
-  const likesArray = await getLikesData();
-  likesArray.map((a) => {
-    Shows.map((show) => {
-      if (a.item_id === show.id) {
-        show.likes = a.likes;
-      } else if (show.likes === undefined) {
-        show.likes = 0;
-      }
-      return show;
-    });
-    return a;
-  });
-
-  Shows.map((show) => {
+const showTemplate = (Shows) => {
+  Shows.forEach((show) => {
     const showInfo = document.createElement('li');
-    showInfo.id = show.id;
     showInfo.className = 'show';
+    showInfo.id = show.id;
     showInfo.innerHTML = `
   <img id="show-img" src=${show.image.medium} alt="show Image">
   <div id="like-show">
@@ -36,8 +21,13 @@ const displayShows = async () => {
   <button type="button" id="comment-btn">Comments</button>
   `;
     allShows.appendChild(showInfo);
-    return show;
   });
+};
+
+const displayShows = async () => {
+  const fetchedShows = await getshow();
+  const Shows = fetchedShows.slice(0, 20);
+  showTemplate(Shows);
 };
 
 export default displayShows;
