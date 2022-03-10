@@ -25,7 +25,7 @@ const showTemplate = (Shows) => {
 const displayShows = async () => {
   const fetchedShows = await getshow();
   const Shows = fetchedShows.slice(0, 20);
-
+  
   const likesArray = await getLikesData();
   likesArray.forEach((a) => {
     Shows.forEach((show) => {
@@ -41,3 +41,4 @@ const displayShows = async () => {
 };
 
 export default displayShows;
+
