@@ -1,22 +1,19 @@
-import {displayModal, modal} from "./modal.js";
+import { displayModal, modal } from './modal.js';
 
 const openModal = () => {
-document.addEventListener('click', async (e) => {
+  document.addEventListener('click', async (e) => {
     if (e.target.id === 'comment-btn') {
       displayModal(e.target);
     }
   });
-}
+};
 
-  
-  const closeModal = () => {
-document.addEventListener('click', async (e) => {
-      if (e.target.id === 'close') {
-        modal.style.display ='none';
-      }
-    });
-}
-  
-  
-export {openModal, closeModal}
-    
+const closeModal = () => {
+  document.addEventListener('click', async (e) => {
+    if (e.target.id === 'close') {
+      modal.style.display = 'none';
+    }
+  });
+};
+
+export { openModal, closeModal };

@@ -2,8 +2,7 @@ import getshow from './getShows.js';
 
 const modal = document.getElementById('modal-popup');
 const modalTemplate = (show) => {
-     modal.innerHTML = 
-      `      <li id=${show.id}>
+  modal.innerHTML = `      <li id=${show.id}>
       <div class ="closeModal">
       <button type="button" id="close">&times;</button>
       </div>
@@ -31,20 +30,18 @@ const modalTemplate = (show) => {
    </section>
    </li>
   `;
-}
+};
 
 const displayModal = async (element) => {
   const fetchedShows = await getshow();
   const shows = fetchedShows.slice(0, 24);
   modal.style.display = 'flex';
   const showId = Number(element.parentNode.id);
-  shows.forEach((show) =>{
-    console.log(show);
+  shows.forEach((show) => {
     if (show.id === showId) {
-      modalTemplate(show)
+      modalTemplate(show);
     }
-  })
+  });
 };
 
-
-export { displayModal, modal};
+export { displayModal, modal };

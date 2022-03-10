@@ -6,5 +6,3 @@ import './styles.css';
 displayShows();
 openModal();
 closeModal();
-
-
