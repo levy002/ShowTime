@@ -1,9 +1,9 @@
 import getshow from './getShows.js';
-import showNumber from './showCounter.js';
+import showsNumber from './showCounter.js';
 import { getLikesData } from './likesCounter.js';
 
 const allShows = document.querySelector('.allShows');
-allShows.innerHTML = '';
+const counter = document.getElementById('shows-counter');
 
 const showTemplate = (Shows) => {
   Shows.forEach((show) => {
@@ -29,7 +29,8 @@ const showTemplate = (Shows) => {
 const displayShows = async () => {
   const fetchedShows = await getshow();
   const Shows = fetchedShows.slice(0, 20);
-  showNumber(Shows);
+  counter.textContent = `(${showsNumber(Shows)})`;
+
   const likesArray = await getLikesData();
   likesArray.forEach((a) => {
     Shows.forEach((show) => {
