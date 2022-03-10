@@ -1,6 +1,5 @@
 body {
   background-color: #fff;
-  font-display: swap;
 }
 
 i:hover {
@@ -17,7 +16,7 @@ i:hover {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  width: 230px;
+  width: 210px;
   height: 370px;
   border-radius: 5px;
   background-color: antiquewhite;
@@ -26,7 +25,7 @@ i:hover {
 
 #show-img {
   height: 275px;
-  width: 210;
+  width: 210px;
 }
 
 #like-show {
