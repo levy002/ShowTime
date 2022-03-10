@@ -9,10 +9,10 @@ const displayModal = async (element) => {
   const showId = element.parentNode.id;
 
   Shows.map((show) => {
-    if (show.id === showId){
-    const showInfo = document.createElement('li');
-    showInfo.id = show.id;
-    showInfo.innerHTML = `
+    if (show.id === showId) {
+      const showInfo = document.createElement('li');
+      showInfo.id = show.id;
+      showInfo.innerHTML = `
   <img class="modal-img" src=${show.image.medium} alt="show Image">
     <h2 class="modal-title" id="show-title">${show.name}</h2>
     <p class="modal-summary">${show.summary}
@@ -32,11 +32,10 @@ const displayModal = async (element) => {
    </div> 
    </section>
   `;
-    modal.appendChild(showInfo);
+      modal.appendChild(showInfo);
+    }
     return show;
-  }
   });
 };
-
 
 export default displayModal;

@@ -32,7 +32,7 @@ i:hover {
 
 #show-img {
   height: 267px;
-  width: 100%; 
+  width: 100%;
 }
 
 #like-show {
@@ -57,11 +57,11 @@ i:hover {
   justify-self: end;
 }
 
-#modal-popup{
+#modal-popup {
   display: none;
 }
 
-.modal-view{
+.modal-view {
   background: red;
   border-radius: 20px;
   margin: 2%;
@@ -110,7 +110,6 @@ h1#headline {
   margin-bottom: 20px;
   width: 80%;
 }
-
 
 input#refresh-score {
   float: right;
