@@ -77,7 +77,7 @@ i:hover {
   list-style-type: none;
 }
 
-#awesome-students {
+#awesome-comments {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -111,22 +111,7 @@ h1#headline {
   width: 80%;
 }
 
-input#refresh-score {
-  float: right;
-  transition: 300ms;
-  border: 3px solid;
-  border-radius: 3px;
-  box-shadow: 4px 4px 0 1px black;
-  background-color: whitesmoke;
-  align-self: end;
-  padding: 5px 10px;
-}
-
-input#refresh-score:hover {
-  transform: scale(1.2);
-}
-
-#students-list {
+#comments-list {
   width: 80%;
   min-height: 170px;
   display: flex;
@@ -137,14 +122,14 @@ input#refresh-score:hover {
   overflow-y: scroll;
 }
 
-#add-student-form {
+#add-comment-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
 }
 
-#add-student-form h2 {
+#add-comment-form h2 {
   font-size: 23px;
 }
 

@@ -4,7 +4,7 @@ const allShows = document.querySelector('.allShows');
 
 const displayShows = async () => {
   const fetchedShows = await getshow();
-  const Shows = fetchedShows.slice(0, 20);
+  const Shows = fetchedShows.slice(0, 24);
 
   Shows.map((show) => {
     const showInfo = document.createElement('li');
