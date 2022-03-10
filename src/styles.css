@@ -1,3 +1,57 @@
 body {
   background-color: #fff;
 }
+
+i:hover {
+  cursor: pointer;
+}
+
+.allShows {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.show {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 210px;
+  height: 370px;
+  border-radius: 5px;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+#show-img {
+  height: 275px;
+  width: 210px;
+}
+
+#like-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+#show-title {
+  margin: 0;
+}
+
+#likes {
+  align-self: end;
+  margin: 0;
+  font-size: 20px;
+}
+
+#comment-btn {
+  align-self: end;
+  justify-self: end;
+}
+
+@media only screen and (min-width: 375px) {
+  ul {
+    margin: 0;
+  }
+}
