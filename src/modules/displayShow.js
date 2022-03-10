@@ -41,5 +41,7 @@ const displayShows = async () => {
     });
   });
 
+  showTemplate(Shows);
+};
 
 export default displayShows;
