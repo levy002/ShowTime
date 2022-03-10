@@ -16,16 +16,17 @@ i:hover {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  width: 210px;
-  height: 370px;
+  width: 250px;
+  height: 400px;
+  border: 1px hidden;
   border-radius: 5px;
   background-color: antiquewhite;
   padding: 10px;
 }
 
 #show-img {
-  height: 275px;
-  width: 210px;
+  height: 267px;
+  width: 100%;
 }
 
 #like-show {
@@ -41,8 +42,20 @@ i:hover {
 
 #likes {
   align-self: end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
   margin: 0;
   font-size: 20px;
+}
+
+#likes p {
+  margin: 0;
+}
+
+.fa-heart {
+  color: rgb(245, 17, 17);
 }
 
 #comment-btn {
