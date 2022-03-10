@@ -1,5 +1,25 @@
 body {
   background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: skyblue;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: rgb(9, 24, 156);
+  display: flex;
+  justify-content: space-between;
+}
+
+header h2 {
+  margin-left: 100px;
+}
+
+header div {
+  margin-right: 100px;
 }
 
 i:hover {
@@ -10,6 +30,7 @@ i:hover {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 
 .show {
