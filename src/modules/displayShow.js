@@ -2,10 +2,7 @@ import getshow from './getShows.js';
 
 const allShows = document.querySelector('.allShows');
 
-const displayShows = async () => {
-  const fetchedShows = await getshow();
-  const Shows = fetchedShows.slice(0, 20);
-
+const showTemplate = (Shows) => {
   Shows.map((show) => {
     const showInfo = document.createElement('li');
     showInfo.className = 'show';
@@ -22,6 +19,12 @@ const displayShows = async () => {
     allShows.appendChild(showInfo);
     return show;
   });
+};
+
+const displayShows = async () => {
+  const fetchedShows = await getshow();
+  const Shows = fetchedShows.slice(0, 20);
+  showTemplate(Shows);
 };
 
 export default displayShows;
