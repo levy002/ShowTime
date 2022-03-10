@@ -101,6 +101,14 @@ i:hover {
   font-size: 20px;
 }
 
+#likes p {
+  margin: 0;
+}
+
+.fa-heart {
+  color: rgb(245, 17, 17);
+}
+
 #comment-btn {
   align-self: end;
   justify-self: end;
