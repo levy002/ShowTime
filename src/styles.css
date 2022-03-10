@@ -40,7 +40,6 @@ i:hover {
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 100px;
-}
 
 .show {
   display: flex;
@@ -49,6 +48,7 @@ i:hover {
   width: 250px;
   height: 400px;
   border: 1px hidden;
+
   border-radius: 5px;
   background-color: antiquewhite;
   padding: 10px;
@@ -105,3 +105,10 @@ i:hover {
   align-self: end;
   justify-self: end;
 }
+
+@media only screen and (min-width: 375px) {
+  ul {
+    margin: 0;
+  }
+}
+
