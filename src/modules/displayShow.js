@@ -1,11 +1,13 @@
 import getshow from './getShows.js';
+import showNumber from './showCounter.js';
 import { getLikesData } from './likesCounter.js';
 
 const allShows = document.querySelector('.allShows');
 
 const displayShows = async () => {
   const fetchedShows = await getshow();
-  const Shows = fetchedShows.slice(0, 20);
+  const Shows = fetchedShows.slice(200, 240);
+  showNumber(Shows);
 
   const likesArray = await getLikesData();
   likesArray.map((a) => {
