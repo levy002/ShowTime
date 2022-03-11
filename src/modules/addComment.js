@@ -13,7 +13,7 @@ const commentTemplate = (data, container) => {
     container.appendChild(paragraph);
   } else {
     data.forEach(((item) => {
-      commentCounter.innerHTML = `Comment (${totalComment(data)})`
+      commentCounter.innerHTML = `Comment (${totalComment(data)})`;
       const comment = document.createElement('div');
       container.appendChild(commentCounter);
       comment.innerHTML = `
@@ -42,9 +42,3 @@ const addComment = () => {
   });
 };
 export { addComment, commentTemplate };
-
-
-
-
-
-

@@ -1,14 +1,14 @@
 import getshow from './getShows.js';
 import { getCommentsData } from './getComments.js';
 import { commentTemplate } from './addComment.js';
+
 const modal = document.getElementById('modal-popup');
 const modalTemplate = async (show) => {
   modal.innerHTML = '';
   modal.id = show.id;
 
   const comments = await getCommentsData(show.id);
-  console.log(comments);
-
+  
   const closeSign = document.createElement('i');
   closeSign.id = 'close';
   closeSign.className = 'fas fa-times';
