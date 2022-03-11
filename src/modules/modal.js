@@ -15,7 +15,7 @@ const modalTemplate = (show) => {
     </div>
 
     <section id="awesome-comments"> 
-    <div id="score">
+    <div id="comment">
          <h2 class="refresh"> Recent Comments </h2> 
          <div id="comments-list"></div>
     </div> 
@@ -23,8 +23,8 @@ const modalTemplate = (show) => {
        <form action="#" id="add-comment-form">
            <h2>Add your Comment </h2>
            <input type="text" placeholder="Your name" name="title" required>
-           <textarea name="comments" id="" cols="30" rows="10" placeholder="Enter your comment" required></textarea>
-           <input type="submit" value="Submit">
+           <textarea name="comments" cols="30" rows="10" placeholder="your insights" required></textarea>
+           <input type="submit" id="submit" value="Submit">
        </form>
    </div> 
    </section>
