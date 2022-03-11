@@ -8,7 +8,7 @@ const modalTemplate = async (show) => {
   modal.id = show.id;
 
   const comments = await getCommentsData(show.id);
-  
+
   const closeSign = document.createElement('i');
   closeSign.id = 'close';
   closeSign.className = 'fas fa-times';
