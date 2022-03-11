@@ -1,37 +1,70 @@
 import getshow from './getShows.js';
-
+import { getCommentsData } from './getComments.js';
+import { commentTemplate } from './addComment.js';
 const modal = document.getElementById('modal-popup');
-const modalTemplate = (show) => {
-  modal.innerHTML = `      <li id=${show.id}>
-      <div class ="closeModal">
-      <button type="button" id="close">&times;</button>
-      </div>
-      <div class ='showList'>
-  <img class="modal-img" src=${show.image.medium} alt="show Image">
-  <div class ="showContent">
-    <h2 class="modal-title" id="show-title">${show.name}</h2>
-    <h4 class="modal-summary">${show.summary}</h4>
-    </div>
-    </div>
+const modalTemplate = async (show) => {
+  modal.innerHTML = '';
+  modal.id = show.id;
 
-    <section id="awesome-comments"> 
-    <div id="comment">
-         <h2 class="refresh"> Recent Comments </h2> 
-         <div id="comments-list"></div>
-    </div> 
-   <div id="input-form">
-       <form action="#" id="add-comment-form">
-           <h2>Add your Comment </h2>
-           <input type="text" placeholder="Your name" name="title" required>
-           <textarea name="comments" cols="30" rows="10" placeholder="your insights" required></textarea>
-           <input type="submit" id="submit" value="Submit">
-       </form>
-   </div> 
-   </section>
-   </li>
-  `;
+  const comments = await getCommentsData(show.id);
+  console.log(comments);
+
+  const closeSign = document.createElement('i');
+  closeSign.id = 'close';
+  closeSign.className = 'fas fa-times';
+  modal.appendChild(closeSign);
+  modal.appendChild(closeSign);
+
+  const showInfo = document.createElement('div');
+  showInfo.className = 'showList';
+
+  const showImg = document.createElement('img');
+  showImg.className = 'modal-img';
+  showImg.alt = 'Show Image';
+  showImg.src = show.image.medium;
+  showInfo.appendChild(showImg);
+
+  const showDescrpt = document.createElement('div');
+  showDescrpt.className = 'showContent';
+
+  const showName = document.createElement('p');
+  showName.className = 'show-title';
+  showName.textContent = show.name;
+  showDescrpt.appendChild(showName);
+
+  const showSummary = document.createElement('p');
+  showSummary.className = 'show-summary';
+  showSummary.textContent = show.summary;
+  showDescrpt.appendChild(showSummary);
+  showInfo.appendChild(showDescrpt);
+  modal.appendChild(showInfo);
+
+  const allComments = document.createElement('div');
+  allComments.id = 'comment-list';
+
+  const comentsCounter = document.createElement('h5');
+  allComments.appendChild(comentsCounter);
+  modal.appendChild(allComments);
+
+  const form = document.createElement('form');
+
+  const username = document.createElement('input');
+  username.type = 'text';
+  username.placeholder = 'Enter your name';
+  form.appendChild(username);
+
+  const textArea = document.createElement('textarea');
+  textArea.placeholder = 'Add your comment here';
+  form.appendChild(textArea);
+
+  const submit = document.createElement('input');
+  submit.value = 'submit';
+  submit.type = 'submit';
+  submit.id = 'submit';
+  form.appendChild(submit);
+  commentTemplate(comments, allComments);
+  modal.appendChild(form);
 };
-
 const displayModal = async (element) => {
   const fetchedShows = await getshow();
   const shows = fetchedShows.slice(0, 24);
@@ -43,5 +76,4 @@ const displayModal = async (element) => {
     }
   });
 };
-
 export { displayModal, modal };
