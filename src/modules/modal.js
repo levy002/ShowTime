@@ -50,6 +50,7 @@ const modalTemplate = async (show) => {
 
   const username = document.createElement('input');
   username.type = 'text';
+  username.id = 'username';
   username.placeholder = 'Enter your name';
   form.appendChild(username);
 
@@ -64,11 +65,17 @@ const modalTemplate = async (show) => {
   form.appendChild(submit);
   commentTemplate(comments, allComments);
   modal.appendChild(form);
+
+  const errorMessage = document.createElement('p');
+  errorMessage.id = 'errorMessage';
+  modal.appendChild(errorMessage);
 };
+
 const displayModal = async (element) => {
   const fetchedShows = await getshow();
   const shows = fetchedShows.slice(0, 24);
   modal.style.display = 'flex';
+  modal.style.flexDirection = 'column';
   const showId = Number(element.parentNode.id);
   shows.forEach((show) => {
     if (show.id === showId) {
