@@ -1,5 +1,4 @@
 import { postComments, getCommentsData } from './getComments.js';
-import commentTemplate from './addComment.js';
 
 const commentTemplate = (data, container) => {
     data.forEach((item => {
