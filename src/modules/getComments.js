@@ -4,7 +4,6 @@ const appId = '3p7stlK4daF9Z5wTNg5X';
 const getCommentsData = async (showId) => {
   let data = await fetch(`${baseUrl}${appId}/comments?item_id=${showId}`);
   data = await data.json();
-  console.log(data);
   return data;
 };
 

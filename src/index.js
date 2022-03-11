@@ -9,5 +9,3 @@ displayShows();
 openModal();
 closeModal();
 addLike();
-
-
