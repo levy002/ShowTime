@@ -118,6 +118,7 @@ i:hover {
 }
 
 .modal-view {
+  flex-direction: column;
   background: antiquewhite;
   border-radius: 20px;
   margin: 2%;
@@ -180,7 +181,7 @@ h1#headline {
   height: 30px;
 }
 
-#score {
+#comment {
   width: 100%;
 }
 
