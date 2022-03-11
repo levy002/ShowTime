@@ -9,7 +9,7 @@ ShowTime is a web application based on an external TV Maze API. The API provides
 - Jest
 
 ## Live Demo
-Visit the live demo [here]()
+Visit the live demo [here](https://show-time-202.netlify.app/)
 
 ## Getting Started
 
