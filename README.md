@@ -2,9 +2,13 @@
 
 ShowTime is a web application based on an external TV Maze API. The API provides data about TV Shows. We then built the webapp around it. The webapp has 2 user interfaces (pages): The Homepage and the Comment modal. On the Homepage, each Show can be `liked` and `commented` on.
 
-## Built With
 
-- HTML, CSS and JavaScript
+![appShoot1](https://user-images.githubusercontent.com/87197412/157998863-fb40a40f-5963-4aff-9be6-7d8dc6859ed6.png)
+![appShoot2 (2)](https://user-images.githubusercontent.com/87197412/157998883-fc6d5001-6bd7-4c6b-a027-3492fd342710.png)
+
+## Built With 
+- JavaScript
+- CSS
 - Webpack
 - Jest
 
@@ -22,7 +26,7 @@ Visit the live demo [here](https://show-time-202.netlify.app/)
 - Clone the repo with the command: `git clone (copied link)`; like so: `git@github.com:levy002/Javascript-Capstone.git`
 - On the terminal, navigate into the directory like so: `cd JavaScript-Capstone-project`
 - Checkout to branch name like so: `git checkout [branch name]`
-- Run `npm i` to install the dependencies
+- Run `npm install` to install the dependencies
 - Run `npm start` to start the application
 
 #### To run Test
@@ -44,10 +48,10 @@ Visit the live demo [here](https://show-time-202.netlify.app/)
 - [GitHub](https://github.com/levy002)
 - [LinkedIn](https://www.linkedin.com/in/levy-ukwishaka-405391223/)
 
-👤 **Emanuel Jolugbo**
+👤 **Emmanuel Jolugbo**
 
-- [GitHub]()
-- [LinkedIn]()
+- [GitHub](https://github.com/thermiee)
+- [LinkedIn](https://www.linkedin.com/in/jolugbo-temiloluwa-b96a54167/)
 
 ## 🤝 Contributing
 
