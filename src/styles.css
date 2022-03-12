@@ -90,6 +90,7 @@ i:hover {
 
 .comment p {
   margin-left: 20px;
+  font-weight: bold;
 }
 
 .comment div:first-child p:first-child {
@@ -154,13 +155,12 @@ i:hover {
 
 .modal-view {
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   background: antiquewhite;
   border-radius: 20px;
   margin: 7.5vh 5%;
   width: 90%;
   padding: 10px;
-  position: fixed;
   height: 85vh;
   flex-wrap: wrap;
 }
@@ -200,7 +200,7 @@ i:hover {
   flex-flow: column;
   align-items: center;
   border: 2px solid #000;
-  width: 50%;
+  width: 70%;
   height: 22%;
   overflow-y: scroll;
 }
@@ -218,10 +218,9 @@ i:hover {
 }
 
 #commentCounter {
-  position: fixed;
-  justify-self: start;
+  justify-self: center;
   align-self: center;
-  width: 43.6%;
+  width: 100%;
   text-align: center;
   background-color: rgb(231, 236, 200);
 }
@@ -284,4 +283,62 @@ footer {
 
 .names {
   color: rgb(206, 15, 63);
+}
+
+@media only screen and (max-width: 768px) {
+  header h2 {
+    margin-left: 10px;
+  }
+
+  header div {
+    margin-right: 30px;
+  }
+
+  #creators {
+    font-size: 14px;
+  }
+
+  .modal-view {
+    height: 90%;
+    margin: 5% auto;
+    width: 90%;
+    padding: 5px;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .showList {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .showContent {
+    gap: 10px;
+  }
+
+  .show-title {
+    font-size: 2rem;
+  }
+
+  .show-summary {
+    font-size: 1.2rem;
+  }
+
+  .showList img {
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+  }
+
+  .modal-img {
+    width: 100%;
+  }
+
+  #comment-list {
+    width: 75%;
+  }
+
+  .comment p {
+    font-size: 1.2rem;
+  }
 }
