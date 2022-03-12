@@ -11,9 +11,7 @@ body {
 
 header {
   background-color: skyblue;
-  position: fixed;
   width: 100%;
-  top: 0;
   color: rgb(9, 24, 156);
   display: flex;
   justify-content: space-between;
@@ -46,11 +44,12 @@ i:hover {
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 90px;
+  width: 90%;
+  margin: 20px auto;
 }
 
 .show {
-  display: flex;
+  display: flex !important;
   flex-flow: column;
   justify-content: space-between;
   width: 250px;
@@ -86,6 +85,19 @@ i:hover {
   gap: 5px;
   margin: 0;
   font-size: 20px;
+  font-weight: bold;
+}
+
+.comment p {
+  margin-left: 20px;
+}
+
+.comment div:first-child p:first-child {
+  margin-top: 25px;
+}
+
+.comment div:first-child p:last-child {
+  margin-top: 20px;
 }
 
 #likes p {
@@ -102,6 +114,7 @@ i:hover {
   justify-content: center;
   align-content: center;
   gap: 4px;
+  font-weight: bold;
 }
 
 #likes-counter p {
@@ -111,10 +124,10 @@ i:hover {
 
 #comment-btn {
   font-weight: bold;
-  padding: 5px;
+  padding: 7px;
   width: 100px;
   align-self: end;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: skyblue;
   border: 1px hidden;
 }
@@ -136,7 +149,7 @@ i:hover {
 
 #close:hover {
   color: red;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .modal-view {
@@ -204,16 +217,6 @@ i:hover {
   width: 100%;
 }
 
-.comment p:first-child {
-  margin-left: 20px;
-}
-.comment div:first-child p:first-child {
-  margin: 20px 0 0 20px;
-}
-.comment div:first-child p:last-child {
-  margin-top: 20px;
-}
-
 #commentCounter {
   position: fixed;
   justify-self: start;
@@ -230,7 +233,6 @@ form {
   justify-content: center;
   width: 30%;
   gap: 20px;
-  justify-content: center;
 }
 
 #username {
@@ -254,13 +256,12 @@ textarea {
 
 #submit:hover {
   opacity: 0.9;
-  cursor: pointer
+  cursor: pointer;
 }
 
 #errorMessage {
   align-self: center;
   font-weight: bold;
-  color: red;
   font-style: italic;
   margin: 0;
 }
@@ -272,10 +273,7 @@ footer {
   align-items: center;
   padding: 10px 50px;
   font-weight: bold;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  margin-top: 20px;
 }
 
 #creators {
@@ -285,7 +283,5 @@ footer {
 }
 
 .names {
-  color:rgb(206, 15, 63)
+  color: rgb(206, 15, 63);
 }
-
-
