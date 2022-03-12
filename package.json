@@ -43,6 +43,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.2",
+    "animate.css": "^4.1.1",
+    "hover.css": "^2.3.2",
     "jest": "^27.5.1"
   }
 }
