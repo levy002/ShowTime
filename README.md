@@ -30,7 +30,7 @@ Visit the live demo [here](https://show-time-202.netlify.app/)
 
 #### To run Test
 
-- Run `npm run test`
+- Run ``npm run test``
 
 ### Usage
 
