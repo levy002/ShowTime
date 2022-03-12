@@ -15,7 +15,7 @@ const showTemplate = (Shows) => {
   <img id="show-img" src=${show.image.medium} alt="show Image">
   <div id="like-show">
     <h2 id="show-title">${show.name}</h2>
-    <i class="fas fa-heart hvr-pulse" id="liked-icon"></i>
+    <i class="far fa-heart hvr-pulse" id="liked-icon"></i>
   </div>
   <div id="likes-counter">
   <p id="likes">${show.likes}</p>

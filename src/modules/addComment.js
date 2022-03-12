@@ -4,22 +4,25 @@ import { postComments, getCommentsData } from './getComments.js';
 const commentTemplate = (data, container) => {
   container.innerHTML = '';
   const commentCounter = document.createElement('h2');
+  commentCounter.id = 'commentCounter';
+  container.appendChild(commentCounter);
   const paragraph = document.createElement('p');
   const key = Object.keys(data)[0];
   if (key === 'error') {
     commentCounter.innerHTML = 'Comment (0)';
     container.appendChild(commentCounter);
     paragraph.innerHTML = 'No comments available';
+    paragraph.style.color = 'green';
+    paragraph.style.fontWeight = 'bold';
+    paragraph.style.fontStyle = 'italic';
+    paragraph.style.marginTop = '10px';
     container.appendChild(paragraph);
   } else {
     data.forEach(((item) => {
       commentCounter.innerHTML = `Comment (${totalComment(data)})`;
-      commentCounter.id = 'commentCounter';
       const comment = document.createElement('div');
       comment.className = 'comment';
-      container.appendChild(commentCounter);
       comment.innerHTML = `
-      <p>${item.creation_date} </p>
         <p> ${item.username} : </p>
         <p> ${item.comment} </p>
         `;
