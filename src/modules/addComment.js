@@ -19,6 +19,7 @@ const commentTemplate = (data, container) => {
       comment.className = 'comment';
       container.appendChild(commentCounter);
       comment.innerHTML = `
+      <p>${item.creation_date} </p>
         <p> ${item.username} : </p>
         <p> ${item.comment} </p>
         `;

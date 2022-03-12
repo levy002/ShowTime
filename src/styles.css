@@ -78,35 +78,8 @@ i:hover {
   margin: 0;
 }
 
-#likes {
-  align-self: end;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px;
-  margin: 0;
-  font-size: 20px;
-}
-
-#likes p {
-  margin: 0;
-}
-
 .fa-heart {
   color: rgb(245, 17, 17);
-}
-
-#likes-counter {
-  align-self: end;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  gap: 4px;
-}
-
-#likes-counter p {
-  margin: 0;
-  font-size: 20px;
 }
 
 #comment-btn {
@@ -136,7 +109,7 @@ i:hover {
 
 #close:hover {
   color: red;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .modal-view {
@@ -193,7 +166,7 @@ i:hover {
 }
 
 #comment-list div:first-child {
-  padding-top: 5%;
+  margin-top: 5%;
 }
 
 .comment {
@@ -207,9 +180,11 @@ i:hover {
 .comment p:first-child {
   margin-left: 20px;
 }
+
 .comment div:first-child p:first-child {
   margin: 20px 0 0 20px;
 }
+
 .comment div:first-child p:last-child {
   margin-top: 20px;
 }
@@ -230,7 +205,6 @@ form {
   justify-content: center;
   width: 30%;
   gap: 20px;
-  justify-content: center;
 }
 
 #username {
@@ -254,7 +228,7 @@ textarea {
 
 #submit:hover {
   opacity: 0.9;
-  cursor: pointer
+  cursor: pointer;
 }
 
 #errorMessage {
@@ -284,8 +258,33 @@ footer {
   gap: 5px;
 }
 
-.names {
-  color:rgb(206, 15, 63)
+#likes {
+  align-self: end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  font-size: 20px;
 }
 
+#likes p {
+  margin: 0;
+}
 
+#likes-counter {
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+}
+
+#likes-counter p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.names {
+  color: rgb(206, 15, 63);
+}
