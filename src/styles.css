@@ -154,15 +154,13 @@ i:hover {
 }
 
 .modal-view {
-  flex-direction: column;
-  gap: 50px;
   background: antiquewhite;
   border-radius: 20px;
-  margin: 7.5vh 5%;
-  width: 90%;
+  margin: 7.5vh 7.5%;
+  width: 85%;
+  gap: 30px;
   padding: 10px;
   height: 85vh;
-  flex-wrap: wrap;
 }
 
 .showList {
@@ -191,7 +189,7 @@ i:hover {
 }
 
 .show-summary {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 #comment-list {
