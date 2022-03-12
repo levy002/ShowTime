@@ -18,6 +18,7 @@ const openModal = () => {
 const closeModal = () => {
   document.addEventListener('click', (e) => {
     if (e.target.id === 'close') {
+      modal.className = 'animate__animated animate__zoomOutDown';
       modal.style.display = 'none';
       header.style.display = 'flex';
       allShows.style.display = 'flex';

@@ -36,8 +36,10 @@ const addComment = () => {
     const form = e.target.parentNode;
     const showId = Number(e.target.parentNode.parentNode.id);
     if (e.target.id === 'submit') {
+      error.innerHTML = '';
       if (title.value === '' || comments.value === '') {
         error.innerHTML = 'Please enter your name and comment!!';
+        error.style.color = 'red';
       } else {
         await postComments(showId, title.value, comments.value);
         const commentsData = await getCommentsData(showId);
