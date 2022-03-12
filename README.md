@@ -2,7 +2,6 @@
 
 ShowTime is a web application based on an external TV Maze API. The API provides data about TV Shows. We then built the webapp around it. The webapp has 2 user interfaces (pages): The Homepage and the Comment modal. On the Homepage, each Show can be `liked` and `commented` on.
 
-
 ![appShoot1](https://user-images.githubusercontent.com/87197412/157998863-fb40a40f-5963-4aff-9be6-7d8dc6859ed6.png)
 ![appShoot2 (2)](https://user-images.githubusercontent.com/87197412/157998883-fc6d5001-6bd7-4c6b-a027-3492fd342710.png)
 
@@ -41,7 +40,7 @@ Visit the live demo [here](https://show-time-202.netlify.app/)
 - The Comment modal would list the comments of the show if they exist
 - You can type your name and comment to comment on the TV Show
 
-## Author
+## Authors
 
 👤 **Levy Ukwishaka**
 

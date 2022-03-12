@@ -11,12 +11,11 @@ body {
 
 header {
   background-color: skyblue;
-  position: fixed;
   width: 100%;
-  top: 0;
   color: rgb(9, 24, 156);
   display: flex;
   justify-content: space-between;
+  padding: 15px;
 }
 
 header h2 {
@@ -45,11 +44,12 @@ i:hover {
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 100px;
+  width: 90%;
+  margin: 20px auto;
 }
 
 .show {
-  display: flex;
+  display: flex !important;
   flex-flow: column;
   justify-content: space-between;
   width: 250px;
@@ -85,6 +85,20 @@ i:hover {
   gap: 5px;
   margin: 0;
   font-size: 20px;
+  font-weight: bold;
+}
+
+.comment p {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.comment div:first-child p:first-child {
+  margin-top: 25px;
+}
+
+.comment div:first-child p:last-child {
+  margin-top: 20px;
 }
 
 #likes p {
@@ -101,6 +115,7 @@ i:hover {
   justify-content: center;
   align-content: center;
   gap: 4px;
+  font-weight: bold;
 }
 
 #likes-counter p {
@@ -109,200 +124,224 @@ i:hover {
 }
 
 #comment-btn {
+  font-weight: bold;
+  padding: 7px;
+  width: 100px;
   align-self: end;
-  justify-self: end;
+  border-radius: 5px;
+  background-color: skyblue;
+  border: 1px hidden;
+}
+
+#comment-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 #modal-popup {
   display: none;
 }
 
+#close {
+  align-self: end;
+  font-size: 20px;
+  margin: 10px 30px 0 0;
+}
+
+#close:hover {
+  color: red;
+  cursor: pointer;
+}
+
 .modal-view {
   flex-direction: column;
+  gap: 50px;
   background: antiquewhite;
   border-radius: 20px;
-  margin: 2%;
+  margin: 7.5vh 5%;
   width: 90%;
   padding: 10px;
-  position: fixed;
-  top: 0;
-  overflow: auto;
-  height: 92%;
-}
-
-.modal-view li {
-  list-style-type: none;
-}
-
-.closeModal {
-  text-align: end;
-}
-
-.closeModal button {
-  font-size: 70px;
-  color: #000;
-  border: none;
-  outline: none;
-  background: none;
-  margin-right: 20px;
-}
-
-.modal-title {
-  font-size: 70px;
-  padding-bottom: 30px;
-}
-
-h4.modal-summary {
-  font-size: 25px;
-}
-
-#awesome-comments {
-  display: flex;
-  justify-content: center;
-  margin: 0 10%;
-  gap: 20px;
-  align-content: center;
-  align-items: center;
-  min-height: 200px;
-}
-
-#headline {
-  margin: 30px;
-  display: flex;
-  font-size: 30px;
-}
-
-h1#headline {
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 10px 10%;
-  padding: 10px;
-  height: 30px;
-}
-
-#comment {
-  width: 100%;
-}
-
-.refresh {
-  font-size: 23px;
-  margin-bottom: 20px;
-  width: 80%;
-}
-
-#comments-list {
-  width: 100%;
-  min-height: 170px;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid;
-  border-radius: 5px;
-  max-height: 50vh;
-  overflow-y: scroll;
-}
-
-#add-comment-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-}
-
-#add-comment-form h2 {
-  font-size: 23px;
-}
-
-#input-form {
-  min-height: 200px;
-}
-
-#input-form input[type="text"] {
-  width: auto;
-  padding: 5px;
-  border: 3px solid;
-  border-radius: 3px;
-}
-
-textarea {
-  width: auto;
-  padding: 5px;
-  border: 3px solid;
-  border-radius: 3px;
-}
-
-.inner-text {
-  margin: auto;
-}
-
-#input-form input[type="submit"] {
-  transition: 300ms;
-  border: 3px solid;
-  border-radius: 3px;
-  box-shadow: 4px 4px 0 1px black;
-  background-color: whitesmoke;
-  align-self: end;
-  padding: 5px 10px;
-}
-
-#input-form input[type="submit"]:hover {
-  transform: scale(1.2);
-}
-
-.showContent {
-  width: 50%;
-}
-
-img.modal-img {
-  width: 40%;
-  margin-left: 5%;
+  height: 85vh;
+  flex-wrap: wrap;
 }
 
 .showList {
   display: flex;
-  gap: 20px;
-  align-content: center;
-  min-height: 200px;
-  padding-bottom: 30px;
+  gap: 2%;
+  height: 30%;
+  width: 90%;
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
-  .showContent {
-    width: 100%;
+.showList img {
+  width: 40%;
+  height: 100%;
+}
+
+.showContent {
+  display: flex;
+  flex-flow: column;
+  gap: 2%;
+  height: 100%;
+}
+
+.show-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.show-summary {
+  font-size: 1.1rem;
+}
+
+#comment-list {
+  align-self: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border: 2px solid #000;
+  width: 70%;
+  height: 22%;
+  overflow-y: scroll;
+}
+
+#comment-list div:first-child {
+  padding-top: 5%;
+}
+
+.comment {
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  padding: 7px 0;
+  width: 100%;
+}
+
+#commentCounter {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(231, 236, 200);
+}
+
+form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  gap: 20px;
+}
+
+#username {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+
+textarea {
+  height: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+
+#submit {
+  width: 80px;
+  padding: 6px;
+  border-radius: 5px;
+  background-color: skyblue;
+  align-self: center;
+  border: 2px solid skyblue;
+}
+
+#submit:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#errorMessage {
+  align-self: center;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  background-color: skyblue;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#creators {
+  display: flex;
+  font-size: 20px;
+  gap: 5px;
+}
+
+.names {
+  color: rgb(206, 15, 63);
+}
+
+@media only screen and (max-width: 768px) {
+  header h2 {
+    margin-left: 10px;
+  }
+
+  header div {
+    margin-right: 30px;
+  }
+
+  #creators {
+    font-size: 14px;
+  }
+
+  .modal-view {
+    height: 90%;
+    margin: 5% auto;
+    width: 90%;
+    padding: 5px;
+    gap: 20px;
+    justify-content: space-between;
   }
 
   .showList {
-    display: flex;
     flex-direction: column;
     gap: 20px;
-    align-content: center;
-    min-height: 200px;
-    padding-bottom: 30px;
   }
 
-  .modal-title {
-    font-size: 25px;
-    text-align: center;
+  .showContent {
+    gap: 10px;
   }
 
-  h4.modal-summary {
-    font-size: 20px;
-    padding: 0 30px;
+  .show-title {
+    font-size: 2rem;
   }
 
-  img.modal-img {
-    width: 50%;
-    align-self: center;
+  .show-summary {
+    font-size: 1.2rem;
   }
 
-  #awesome-comments {
-    display: flex;
-    flex-direction: column;
+  .showList img {
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+  }
 
-    @media only screen and (min-width: 375px) {
-      ul {
-        margin: 0;
-      }
-    }
+  .modal-img {
+    width: 100%;
+  }
+
+  #comment-list {
+    width: 75%;
+  }
+
+  .comment p {
+    font-size: 1.2rem;
   }
 }

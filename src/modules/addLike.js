@@ -7,6 +7,10 @@ const addLike = () => {
     const showId = Number(clickedElement.parentNode.parentNode.id);
     if (clickedElement.id === 'liked-icon') {
       postLikes(showId, likesCounter);
+      clickedElement.className = 'fas fa-heart animate__animated animate__heartBeat';
+      setTimeout(() => {
+        clickedElement.className = 'fas fa-heart';
+      }, 3000);
     }
   });
 };
